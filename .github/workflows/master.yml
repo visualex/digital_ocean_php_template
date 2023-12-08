@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build_and_push_mysql:
+  build_and_push_aphp:
     runs-on: ubuntu-latest
 
     steps:
