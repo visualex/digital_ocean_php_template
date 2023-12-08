@@ -3,7 +3,6 @@ FROM php:7.2-apache
 # this line is to break cache and rebuild this image
 RUN echo "latest"
 #
-#
 # Timezone in containers, there are alternatives like mounting hosts /etc/localtime (to be considered if we split up the datacenter)
 # keeping this section separated for extra clarity in dependencies (tzdata)
 # RUN export DEBIAN_FRONTEND=noninteractive
