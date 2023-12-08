@@ -3,7 +3,6 @@ FROM php:7.2-apache
 # this line is to break cache and rebuild this image
 RUN echo "latest"
 #
-#
 # Timezone in containers, there are alternatives like mounting hosts /etc/localtime (to be considered if we split up the datacenter)
 # keeping this section separated for extra clarity in dependencies (tzdata)
 # RUN export DEBIAN_FRONTEND=noninteractive
@@ -13,6 +12,7 @@ RUN apt-get install -y tzdata && rm -rf /var/lib/apt/lists/*
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # security notes
+#
 #
 # apache is executed by root but drops to www-data when scripts are executed from the front end:
 # (same old functionality apache always had) making this container safe
