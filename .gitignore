@@ -1,0 +1,23 @@
+# do not ignore /config/app.php
+webroot/*
+!webroot/.htaccess
+!webroot/index.php
+/tmp
+/tmp/*
+/logs/*
+
+# buggy vendor code
+vendor/symfony/console/Resources/bin/hiddeninput.exe
+vendor/seld/cli-prompt/res/hiddeninput.exe
+hiddeninput.exe
+
+# add your system generated or personal tool files here
+*DS_Store
+_*.php
+.idea
+._.*
+._*
+*.sass-cache/
+.tags
+.tags_swap
+*.swp
