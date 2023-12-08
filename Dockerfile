@@ -13,6 +13,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # security notes
 #
+#
 # apache is executed by root but drops to www-data when scripts are executed from the front end:
 # (same old functionality apache always had) making this container safe
 # please see composer notes below
